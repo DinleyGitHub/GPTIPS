@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" name="description" content="GPTIPS 2 pareto report" name="author" content="Dominic Searson"/>
+<title>GPTIPS pareto front report.</title>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load('visualization', '1', {packages: ['table']});
+</script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+h1, h2, h3 {
+color: #0073bd; margin-top: 20px; 
+}
+p.warn {
+color: #993300; 
+}
+.google-visualization-table-table .google-visualization-table-td-number {
+font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;text-align: left;
+}
+.google-visualization-table-td {
+padding-top: 6px;padding-bottom: 6px;font-size: 14px;
+}
+</style>
+<script type="text/javascript">
+function drawPerformanceTable() {
+var data = new google.visualization.DataTable();
+data.addColumn('number','Model ID');
+data.addColumn('number','Goodness of fit (R<sup>2</sup>)');
+data.addColumn('number','Model complexity');
+data.addColumn('string','Model');
+data.addRows(8);
+data.setCell(0,0, 10);
+data.setCell(0,1, 0.984);
+data.setCell(0,2, 176);
+data.setCell(0,3, '3.2 normals_2 + 3.95 view_2 + 3.39 sin(normals_1 + normals_2 - 5.37) - 9.48 cos(fragdepth_3 - 1.0 normals_3) - 22.7 cos(sin(normals_1)) + 5.13 sin(sin(normals_1)) - 3.2 sin(sin(normals_3)) + 0.02 tan(view_2 (normals_2 + 4.39)) + 11.6 cos(normals_2 - 1.0 normals_1 + 4.67) + 2.65 sin(normals_2 + normals_3) - 18.5 cos(0.343 normals_3 + tan(normals_2)) + 2.65 cos(normals_3) - 22.7 tan(normals_2) - 5.13 normals_2 normals_3 + 0.848 normals_2 view_2 + 0.848 view_2 sin(normals_3) - 5.13 normals_3<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 45.9');
+data.setCell(1,0, 15);
+data.setCell(1,1, 0.978);
+data.setCell(1,2, 126);
+data.setCell(1,3, '2.47 view_2 - 0.385 normals_2 + 2.05 sin(normals_1 + normals_2 - 5.37) + 0.654 cos(normals_3 - 1.0 view_1 + tan(normals_3)) + 0.385 sin(sin(normals_3)) + 0.0038 tan(view_2 (normals_2 + 4.39)) - 0.601 sin(normals_2 + normals_3) - 0.601 cos(normals_3) + 0.531 normals_2 view_2 + 0.531 view_2 sin(normals_3) - 1.67');
+data.setCell(2,0, 18);
+data.setCell(2,1, 0.984);
+data.setCell(2,2, 188);
+data.setCell(2,3, '3.06 normals_2 + 3.95 view_2 + 3.54 sin(normals_1 + normals_2 - 5.37) - 2.33 cos(normals_3 - 1.0 view_1 + tan(normals_3)) - 22.6 cos(sin(normals_1)) + 5.34 sin(sin(normals_1)) - 3.06 sin(sin(normals_3)) + 0.02 tan(view_2 (normals_2 + 4.39)) + 11.6 cos(normals_2 - 1.0 normals_1 + 4.65) + 2.57 sin(normals_2 + normals_3) - 18.4 cos(0.354 normals_3 + tan(normals_2)) + 2.57 cos(normals_3) - 22.6 tan(normals_2) - 5.34 normals_2 normals_3 + 0.848 normals_2 view_2 + 0.848 view_2 sin(normals_3) - 5.34 normals_3<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 38.7');
+data.setCell(3,0, 93);
+data.setCell(3,1, 0.981);
+data.setCell(3,2, 129);
+data.setCell(3,3, '0.147 normals_2 + 2.07 view_2 + 4.02 sin(normals_1 + normals_2 - 5.37) - 1.86 cos(sin(normals_1)) + 0.908 sin(sin(normals_1)) - 0.147 sin(sin(normals_3)) - 1.77 cos(0.343 normals_3 + tan(normals_2)) - 1.86 tan(normals_2) - 0.908 normals_2 normals_3 + 0.446 normals_2 view_2 + 0.446 view_2 sin(normals_3) - 0.908 normals_3<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 0.462');
+data.setCell(4,0, 199);
+data.setCell(4,1, 0.982);
+data.setCell(4,2, 131);
+data.setCell(4,3, '0.126 normals_2 + 2.66 view_2 + 0.335 cos(normals_3 - 1.0 view_1 + tan(normals_3)) - 0.878 cos(sin(normals_1)) + 0.263 sin(sin(normals_1)) - 0.126 sin(sin(normals_3)) + 0.00666 tan(view_2 (normals_2 + 4.39)) + 0.617 cos(normals_2 - 1.0 normals_1 + 4.65) - 0.878 tan(normals_2) - 0.263 normals_2 normals_3 + 0.572 normals_2 view_2 + 0.572 view_2 sin(normals_3) - 0.263 normals_3<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 0.58');
+data.setCell(5,0, 206);
+data.setCell(5,1, 0.983);
+data.setCell(5,2, 167);
+data.setCell(5,3, '3.47 normals_2 - 3.72 normals_1 + 3.24 view_2 - 0.918 sin(normals_1 + normals_2 - 5.37) - 0.034 cos(normals_3 - 1.0 view_1 + tan(normals_3)) - 6.56 cos(sin(normals_1)) - 3.47 sin(sin(normals_3)) + 0.0125 tan(view_2 (normals_2 + 4.39)) - 0.854 cos(normals_2 - 1.0 normals_1 + 4.65) + 2.86 sin(normals_2 + normals_3) - 4.01 cos(0.343 normals_3 + tan(normals_2)) + 2.86 cos(normals_3) - 6.56 tan(normals_2) + 1.5 normals_2 view_2 + 1.5 view_2 sin(normals_3) + 8.41');
+data.setCell(6,0, 305);
+data.setCell(6,1, 0.984);
+data.setCell(6,2, 184);
+data.setCell(6,3, '2.84 normals_2 + 3.93 view_2 + 3.42 sin(normals_1 + normals_2 - 5.37) - 2.21 cos(normals_3 - 1.0 view_1 + tan(normals_3)) - 22.2 cos(sin(normals_1)) + 4.97 sin(sin(normals_1)) - 2.84 sin(sin(normals_3)) + 0.0198 tan(view_2 (normals_2 + 4.39)) + 11.1 cos(normals_2 - 1.0 normals_1 + 4.65) + 2.66 sin(normals_2 + normals_3) - 18.0 cos(0.343 normals_3 + tan(normals_2)) + 2.66 cos(normals_3) - 22.2 tan(normals_2) - 4.97 normals_2 normals_3 + 1.69 normals_2 view_2 - 4.97 normals_3<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 37.7');
+data.setCell(7,0, 558);
+data.setCell(7,1, 0.969);
+data.setCell(7,2, 85);
+data.setCell(7,3, '0.0504 tan(normals_2 + normals_3 - 3.26) - 0.589 cos(normals_2 cos(normals_2)) + 2.35 sin(view_2 cos(normals_3)) + 0.316 cos(2.0 normals_3 + tan(normals_2)) + 0.279');
+viz = new google.visualization.Table(document.getElementById('perf_table'));
+viz.draw(data,  {width: 1000, allowHtml: true});}
+google.setOnLoadCallback(drawPerformanceTable);
+ </script>
+</head>
+<body>
+<body style="font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif; border: 0;">
+<div style="text-align: left; margin-bottom: 50px;margin-top: 50px;margin-left: 15px;"><h2>GPTIPS pareto front report</h2><p>27-Jun-2016 21:12:26</p>
+<p>Config file: symreg_config.m</p>
+<p>Number of models on front: 8</p><p>Total models: 1000</p><p style="margin-top: 30px;">This report shows the expressional complexity/performance characteristics (on training data) of symbolic models on the pareto front.</p><p>Numerical precision is reduced for display purposes.</p><p style="margin-bottom: 30px;">Click on column headers to sort models by expressional complexity and goodness of fit (R<sup>2</sup>).</p><div id="perf_table"></div>
+<p style="color:gray;text-align:center;margin-top: 50px;">GPTIPS - the symbolic data mining platform for MATLAB</p><p style="color:gray;text-align:center;">&#169; Dominic Searson 2009-2015</p></div>
+</body>
+</html>

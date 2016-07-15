@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" name="description" content="GPTIPS 2 pareto report" name="author" content="Dominic Searson"/>
+<title>GPTIPS pareto front report.</title>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load('visualization', '1', {packages: ['table']});
+</script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+h1, h2, h3 {
+color: #0073bd; margin-top: 20px; 
+}
+p.warn {
+color: #993300; 
+}
+.google-visualization-table-table .google-visualization-table-td-number {
+font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;text-align: left;
+}
+.google-visualization-table-td {
+padding-top: 6px;padding-bottom: 6px;font-size: 14px;
+}
+</style>
+<script type="text/javascript">
+function drawPerformanceTable() {
+var data = new google.visualization.DataTable();
+data.addColumn('number','Model ID');
+data.addColumn('number','Goodness of fit (R<sup>2</sup>)');
+data.addColumn('number','Model complexity');
+data.addColumn('string','Model');
+data.addRows(13);
+data.setCell(0,0, 605);
+data.setCell(0,1, 0.91);
+data.setCell(0,2, 118);
+data.setCell(0,3, '1.66 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 1.45 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 1.45 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + (3.42e18 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span>)/(1.41e18 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 1.64e16) + 3.25/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (1.12e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 8.79e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>)/(4.5e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 1.15e20) + (1.17 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.79))/(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.014) + 1.27');
+data.setCell(1,0, 629);
+data.setCell(1,1, 0.913);
+data.setCell(1,2, 140);
+data.setCell(1,3, '0.576 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 2.14 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 2.14 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 4.68/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (3.57e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 2.8e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>)/(1.13e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 2.87e19) + (1.76 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.79))/(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.014) + (4.44e-16 (8.15e21 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 4.81e22))/((1.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.79e4) (2.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 233.0)) + 6.97');
+data.setCell(2,0, 642);
+data.setCell(2,1, 0.913);
+data.setCell(2,2, 140);
+data.setCell(2,3, '0.576 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 2.14 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 2.14 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 4.68/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (3.57e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 2.8e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>)/(1.13e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 2.87e19) + (1.76 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.79))/(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.014) + (2.22e-16 (1.63e22 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 9.62e22))/((1.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.79e4) (2.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 233.0)) + 6.97');
+data.setCell(3,0, 655);
+data.setCell(3,1, 0.901);
+data.setCell(3,2, 104);
+data.setCell(3,3, '0.978 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 0.828 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 0.828 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 1.98/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (1.31e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.03e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>)/(2.25e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 6.19e19) + (6.94e-18 (4.64e22 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.74e23))/((1.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.79e4) (2.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 233.0)) + 1.23');
+data.setCell(4,0, 671);
+data.setCell(4,1, 0.913);
+data.setCell(4,2, 140);
+data.setCell(4,3, '0.576 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 2.14 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 2.14 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 4.68/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (1.43e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.12e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>)/(4.5e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 1.15e20) + (1.76 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.79))/(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.014) + (4.44e-16 (8.15e21 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 4.81e22))/((1.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.79e4) (2.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 233.0)) + 6.97');
+data.setCell(5,0, 685);
+data.setCell(5,1, 0.883);
+data.setCell(5,2, 52);
+data.setCell(5,3, '(4.9e78 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.06e79 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 1.25e81 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 3.5e80 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 7.55e80 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 3.45e80 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 7.53e63)/(2.5e81 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 3.5e79)');
+data.setCell(6,0, 702);
+data.setCell(6,1, 0.899);
+data.setCell(6,2, 92);
+data.setCell(6,3, '1.05 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 0.738 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 0.738 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 1.76/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (1.48e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.16e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>)/(2.25e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 6.19e19) - (0.148 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.79))/(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.014) + 0.691');
+data.setCell(7,0, 732);
+data.setCell(7,1, 0.899);
+data.setCell(7,2, 92);
+data.setCell(7,3, '1.05 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 0.738 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 0.738 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 1.76/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (1.48e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.16e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>)/(2.25e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 6.19e19) - (0.148 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.79))/(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.014) + 0.691');
+data.setCell(8,0, 783);
+data.setCell(8,1, 0.891);
+data.setCell(8,2, 71);
+data.setCell(8,3, '0.382 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 0.251 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 0.251 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 1.11/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (1.11e-16 (5.15e21 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 3.04e22))/((1.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.79e4) (2.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 233.0)) + 1.25');
+data.setCell(9,0, 786);
+data.setCell(9,1, 0.873);
+data.setCell(9,2, 46);
+data.setCell(9,3, '0.455 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 0.278/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (2.06e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.61e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>)/(4.5e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 1.24e20) + 0.109');
+data.setCell(10,0, 795);
+data.setCell(10,1, 0.91);
+data.setCell(10,2, 112);
+data.setCell(10,3, '0.199 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 2.08 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 2.08 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 4.74/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (1.11e-16 (3.91e22 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.31e23))/((1.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.79e4) (2.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 233.0)) + (2.08 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.79))/(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.014) + 8.02');
+data.setCell(11,0, 798);
+data.setCell(11,1, 0.912);
+data.setCell(11,2, 132);
+data.setCell(11,3, '0.854 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> - 2.01 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 2.01 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 4.36/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) + (1.34e20 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 5.27e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>)/(4.5e19 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 1.15e20) + (1.26 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.79))/(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.014) + (5.55e-17 (4.97e22 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.94e23))/((1.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.79e4) (2.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 233.0)) + 5.62');
+data.setCell(12,0, 804);
+data.setCell(12,1, 0.907);
+data.setCell(12,2, 111);
+data.setCell(12,3, '4.75/(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.55) - 2.15 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 2.15 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + (2.4 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.79))/(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.014) + (1.11e-16 (4.37e22 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> - 2.58e23))/((1.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.79e4) (2.0e4 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 233.0)) + 8.75');
+viz = new google.visualization.Table(document.getElementById('perf_table'));
+viz.draw(data,  {width: 1000, allowHtml: true});}
+google.setOnLoadCallback(drawPerformanceTable);
+ </script>
+</head>
+<body>
+<body style="font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif; border: 0;">
+<div style="text-align: left; margin-bottom: 50px;margin-top: 50px;margin-left: 15px;"><h2>GPTIPS pareto front report</h2><p>28-Jun-2016 13:46:44</p>
+<p>Config file: symreg_config.m</p>
+<p>Number of models on front: 13</p><p>Total models: 900</p><p style="margin-top: 30px;">This report shows the expressional complexity/performance characteristics (on training data) of symbolic models on the pareto front.</p><p>Numerical precision is reduced for display purposes.</p><p style="margin-bottom: 30px;">Click on column headers to sort models by expressional complexity and goodness of fit (R<sup>2</sup>).</p><div id="perf_table"></div>
+<p style="color:gray;text-align:center;margin-top: 50px;">GPTIPS - the symbolic data mining platform for MATLAB</p><p style="color:gray;text-align:center;">&#169; Dominic Searson 2009-2015</p></div>
+</body>
+</html>

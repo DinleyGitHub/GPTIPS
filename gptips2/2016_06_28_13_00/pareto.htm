@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" name="description" content="GPTIPS 2 pareto report" name="author" content="Dominic Searson"/>
+<title>GPTIPS pareto front report.</title>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load('visualization', '1', {packages: ['table']});
+</script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+h1, h2, h3 {
+color: #0073bd; margin-top: 20px; 
+}
+p.warn {
+color: #993300; 
+}
+.google-visualization-table-table .google-visualization-table-td-number {
+font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;text-align: left;
+}
+.google-visualization-table-td {
+padding-top: 6px;padding-bottom: 6px;font-size: 14px;
+}
+</style>
+<script type="text/javascript">
+function drawPerformanceTable() {
+var data = new google.visualization.DataTable();
+data.addColumn('number','Model ID');
+data.addColumn('number','Goodness of fit (R<sup>2</sup>)');
+data.addColumn('number','Model complexity');
+data.addColumn('string','Model');
+data.addRows(9);
+data.setCell(0,0, 117);
+data.setCell(0,1, 0.701);
+data.setCell(0,2, 10);
+data.setCell(0,3, '0.414 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 0.414 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> + 1.27 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 0.00402');
+data.setCell(1,0, 369);
+data.setCell(1,1, 0.872);
+data.setCell(1,2, 14);
+data.setCell(1,3, '0.441 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 1.77 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 2.11 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 4.64e-16');
+data.setCell(2,0, 449);
+data.setCell(2,1, 0.892);
+data.setCell(2,2, 29);
+data.setCell(2,3, '7.93 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 2.5 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 1.84 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 2.35 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 5.19 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 1.02e-15');
+data.setCell(3,0, 601);
+data.setCell(3,1, 0.902);
+data.setCell(3,2, 42);
+data.setCell(3,3, '10.8 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 3.76 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 0.225 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 3.31 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 6.9 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 6.95 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 4.19 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">3</span> - 2.02e-7');
+data.setCell(4,0, 629);
+data.setCell(4,1, 0.902);
+data.setCell(4,2, 38);
+data.setCell(4,3, '10.8 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 3.76 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 0.225 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> + 3.31 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 6.9 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 6.95 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 4.19 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">3</span> - 2.02e-7');
+data.setCell(5,0, 647);
+data.setCell(5,1, 0.902);
+data.setCell(5,2, 36);
+data.setCell(5,3, '8.2 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 2.56 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 3.29 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 0.732 x<span style="position:relative;top: 0.3em;font-size:0.7em">7</span> - 5.45 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 6.89 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 4.14 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">3</span> - 9.21e-12');
+data.setCell(6,0, 682);
+data.setCell(6,1, 0.901);
+data.setCell(6,2, 31);
+data.setCell(6,3, '9.27 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 2.96 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 2.96 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 6.14 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 5.75 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 3.2 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">3</span> + 2.12e-5');
+data.setCell(7,0, 692);
+data.setCell(7,1, 0.902);
+data.setCell(7,2, 36);
+data.setCell(7,3, '8.2 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 0.732 x<span style="position:relative;top: 0.3em;font-size:0.7em">1</span> - 2.56 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 3.29 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 5.45 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 6.89 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 4.14 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">3</span> - 9.21e-12');
+data.setCell(8,0, 793);
+data.setCell(8,1, 0.889);
+data.setCell(8,2, 26);
+data.setCell(8,3, '5.31 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span> - 1.46 x<span style="position:relative;top: 0.3em;font-size:0.7em">3</span> + 1.46 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 3.59 x<span style="position:relative;top: 0.3em;font-size:0.7em">2</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 1.71 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">3</span> - 4.79e-5');
+viz = new google.visualization.Table(document.getElementById('perf_table'));
+viz.draw(data,  {width: 1000, allowHtml: true});}
+google.setOnLoadCallback(drawPerformanceTable);
+ </script>
+</head>
+<body>
+<body style="font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif; border: 0;">
+<div style="text-align: left; margin-bottom: 50px;margin-top: 50px;margin-left: 15px;"><h2>GPTIPS pareto front report</h2><p>28-Jun-2016 13:03:10</p>
+<p>Config file: symreg_config.m</p>
+<p>Number of models on front: 9</p><p>Total models: 900</p><p style="margin-top: 30px;">This report shows the expressional complexity/performance characteristics (on training data) of symbolic models on the pareto front.</p><p>Numerical precision is reduced for display purposes.</p><p style="margin-bottom: 30px;">Click on column headers to sort models by expressional complexity and goodness of fit (R<sup>2</sup>).</p><div id="perf_table"></div>
+<p style="color:gray;text-align:center;margin-top: 50px;">GPTIPS - the symbolic data mining platform for MATLAB</p><p style="color:gray;text-align:center;">&#169; Dominic Searson 2009-2015</p></div>
+</body>
+</html>

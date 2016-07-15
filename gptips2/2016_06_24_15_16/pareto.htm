@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" name="description" content="GPTIPS 2 pareto report" name="author" content="Dominic Searson"/>
+<title>GPTIPS pareto front report.</title>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load('visualization', '1', {packages: ['table']});
+</script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+h1, h2, h3 {
+color: #0073bd; margin-top: 20px; 
+}
+p.warn {
+color: #993300; 
+}
+.google-visualization-table-table .google-visualization-table-td-number {
+font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;text-align: left;
+}
+.google-visualization-table-td {
+padding-top: 6px;padding-bottom: 6px;font-size: 14px;
+}
+</style>
+<script type="text/javascript">
+function drawPerformanceTable() {
+var data = new google.visualization.DataTable();
+data.addColumn('number','Model ID');
+data.addColumn('number','Goodness of fit (R<sup>2</sup>)');
+data.addColumn('number','Model complexity');
+data.addColumn('string','Model');
+data.addRows(11);
+data.setCell(0,0, 9);
+data.setCell(0,1, 0.98);
+data.setCell(0,2, 89);
+data.setCell(0,3, '1.94 cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 0.394 cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span>) + 1.79 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.52 tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) + 0.709 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> (tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span>) - 1.0 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 0.394 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">4</span> + 2.42 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 2.34');
+data.setCell(1,0, 110);
+data.setCell(1,1, 0.943);
+data.setCell(1,2, 32);
+data.setCell(1,3, '1.66 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 0.419 cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 1.17 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 0.416');
+data.setCell(2,0, 150);
+data.setCell(2,1, 0.98);
+data.setCell(2,2, 78);
+data.setCell(2,3, '0.164 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 1.94 cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 1.5 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.52 tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) + 0.682 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> (tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span>) - 1.0 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 0.164 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">4</span> + 2.46 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 1.94');
+data.setCell(3,0, 187);
+data.setCell(3,1, 0.98);
+data.setCell(3,2, 85);
+data.setCell(3,3, '1.94 cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 0.397 cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span>) + 0.716 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> (x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 1.0 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 1.79 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.52 tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) + 0.397 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">4</span> + 2.43 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 2.34');
+data.setCell(4,0, 211);
+data.setCell(4,1, 0.979);
+data.setCell(4,2, 67);
+data.setCell(4,3, '1.92 cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) - 0.00211 x<span style="position:relative;top: 0.3em;font-size:0.7em">1</span> + 1.72 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.515 tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) + 0.624 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> (tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span>) - 1.0 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 2.43 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 1.92');
+data.setCell(5,0, 229);
+data.setCell(5,1, 0.929);
+data.setCell(5,2, 30);
+data.setCell(5,3, '1.68 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> - 0.424 cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) - 0.519 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> (tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span>) - 1.0 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 0.421');
+data.setCell(6,0, 254);
+data.setCell(6,1, 0.975);
+data.setCell(6,2, 53);
+data.setCell(6,3, '2.04 cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 1.76 x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> + 0.532 tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) + 1.4 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 2.04');
+data.setCell(7,0, 301);
+data.setCell(7,1, 0.982);
+data.setCell(7,2, 114);
+data.setCell(7,3, '0.0114 tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> + x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 2.27 sin(sin(cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>))) - 0.375 sin(tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 1.88 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> sin(x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> + x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) + 1.07 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 0.748 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> cos(tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)) tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) + 1.69');
+data.setCell(8,0, 405);
+data.setCell(8,1, 0.982);
+data.setCell(8,2, 106);
+data.setCell(8,3, '1.88 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> sin(x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> + x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) - 2.39 sin(sin(cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>))) - 0.38 sin(tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 0.125 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> + x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) + 1.55 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> - 0.985 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span> cos(tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)) tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) + 1.78');
+data.setCell(9,0, 467);
+data.setCell(9,1, 0.856);
+data.setCell(9,2, 26);
+data.setCell(9,3, '0.136 sin(tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 1.8 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> sin(x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> + x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) - 0.00129');
+data.setCell(10,0, 482);
+data.setCell(10,1, 0.975);
+data.setCell(10,2, 57);
+data.setCell(10,3, '1.89 x<span style="position:relative;top: 0.3em;font-size:0.7em">6</span> sin(x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span> + x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>) - 2.5 sin(sin(cos(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>))) - 0.411 sin(tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span>) + 1.27 x<span style="position:relative;top: 0.3em;font-size:0.7em">4</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span><span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> tan(x<span style="position:relative;top: 0.3em;font-size:0.7em">5</span>)<span style="position:relative;bottom: 0.3em;font-size:0.7em">2</span> + 1.86');
+viz = new google.visualization.Table(document.getElementById('perf_table'));
+viz.draw(data,  {width: 1000, allowHtml: true});}
+google.setOnLoadCallback(drawPerformanceTable);
+ </script>
+</head>
+<body>
+<body style="font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif; border: 0;">
+<div style="text-align: left; margin-bottom: 50px;margin-top: 50px;margin-left: 15px;"><h2>GPTIPS pareto front report</h2><p>24-Jun-2016 15:19:51</p>
+<p>Config file: symreg_config.m</p>
+<p>Number of models on front: 11</p><p>Total models: 600</p><p style="margin-top: 30px;">This report shows the expressional complexity/performance characteristics (on training data) of symbolic models on the pareto front.</p><p>Numerical precision is reduced for display purposes.</p><p style="margin-bottom: 30px;">Click on column headers to sort models by expressional complexity and goodness of fit (R<sup>2</sup>).</p><div id="perf_table"></div>
+<p style="color:gray;text-align:center;margin-top: 50px;">GPTIPS - the symbolic data mining platform for MATLAB</p><p style="color:gray;text-align:center;">&#169; Dominic Searson 2009-2015</p></div>
+</body>
+</html>
